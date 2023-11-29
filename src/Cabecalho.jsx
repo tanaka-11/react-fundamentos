@@ -13,4 +13,5 @@ function Cabecalho() {
   );
 }
 
+// Exportando o componente
 export default Cabecalho;

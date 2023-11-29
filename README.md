@@ -1,6 +1,6 @@
 # Fundamentos de React
 
-## Branch: 01-componentes-jsx
+## Branch: 02-separacao-de-componentes
 
 ### Informações gerais
 
@@ -10,12 +10,6 @@ A renderização ocorre na seguinte sequencia:
 
 ---
 
-Componentes são **obrigatorios** terem a extensão .jsx
+Para importar um componente individual precisamos passar o nome do componente dentro de uma tag
 
----
-
-{/* Comentário dentro do JSX*/} - Obrigatorio uso de chaves e utilizar comentario de varias linhas
-
---- 
-
-Extensão - Prettier - Code formatter
+Exemplo - `<Cabecalho />`
