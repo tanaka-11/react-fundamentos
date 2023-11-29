@@ -1,20 +1,13 @@
 // Todos componentes react devem começar com letra maiuscula
+// Importação do cabeçalho
+import Cabecalho from "./Cabecalho";
 
 // Vamos utilizar o componente (Fragment <></>) e envolver o return entre parenteses para retornar nosso html.
 function App() {
   return (
     <>
-      <header>
-        <h1>Olá React! - @_Tanaka11_</h1>
-        <hr />
-        <nav>
-          <a href="#">Home</a>
-          <a href="#">Produto</a>
-          <a href="#">Contato</a>
-        </nav>
-      </header>
-
-      {/* Comentário dentro do JSX*/}
+      {/* Importando o componente individual envolvido por uma tag */}
+      <Cabecalho />
 
       <main>
         <h2>Conteúdo da aplicação</h2>
@@ -27,17 +20,17 @@ function App() {
 
         <article>
           <h3>Artigo 1 - Tanaka</h3>
-          <p>Mol breck</p>
+          <p>Mol breck 👹</p>
         </article>
 
         <article>
           <h3>Artigo 2 - Bia</h3>
-          <p>Pretinha saliente</p>
+          <p>Pretinha saliente 🤤</p>
         </article>
 
         <article>
           <h3>Artigo 1 - Nando</h3>
-          <p>Maromba noia</p>
+          <p>Maromba noia 🍁</p>
         </article>
       </main>
 
