@@ -1,6 +1,16 @@
 // Todos componentes react devem começar com letra maiuscula
+
+// Vamos utilizar o componente (Fragment <></>) para retornar nosso html
 function App() {
-  return <h1>Olá React! -  @_Tanaka11_</h1>
+  return <> 
+          <header>
+            <h1>Olá React! -  @_Tanaka11_</h1>
+          </header>
+
+          <main>
+            <h2>Salve</h2>
+          </main> 
+        </>
 }
 
 export default App
