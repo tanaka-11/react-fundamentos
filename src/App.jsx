@@ -7,6 +7,8 @@ function App() {
             <h1>Olá React! -  @_Tanaka11_</h1>
           </header>
 
+          {/* Comentário dentro do JSX*/}
+          
           <main>
             <h2>Salve</h2>
           </main> 
