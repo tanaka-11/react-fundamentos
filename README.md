@@ -1,6 +1,8 @@
 # Fundamentos de React
 
-## Informações gerais
+## Branch: 00-projeto-sem-dados
+
+### Informações gerais
 
 A renderização ocorre na seguinte sequencia:
 
