@@ -1,6 +1,6 @@
 # Fundamentos de React
 
-## Branch: 00-projeto-sem-dados
+## Branch: 01-componentes-jsx
 
 ### Informações gerais
 
