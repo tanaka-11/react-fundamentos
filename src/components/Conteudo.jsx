@@ -10,6 +10,15 @@ function Conteudo() {
         ea? Pariatur dolore aperiam architecto vero reiciendis eaque commodi!
       </p>
 
+      {/* Reaproveitamento de componentes 
+      
+      Artigo 1 */}
+      <Artigo />
+
+      {/* Artigo 2 */}
+      <Artigo />
+
+      {/* Artigo 3 */}
       <Artigo />
     </main>
   );
