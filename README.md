@@ -8,6 +8,12 @@ A renderização ocorre na seguinte sequencia:
 
 **index.html <- main.jsx <- App.jsx**
 
+JSX -> HTML + JS para criar componentes
+
+App.jsx (Componente PRINCIPAL)
+main.jsx (Inicialização do React)
+index.html (elemento raíz e chamada do script)
+
 ---
 
 Para importar um componente individual precisamos passar o nome do componente dentro de uma tag
