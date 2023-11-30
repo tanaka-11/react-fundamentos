@@ -4,4 +4,6 @@
 
 ### Informações gerais:
 
-Utilizando CSS inline com React - CSS in JS
+#### CSS in JS
+
+- Utilizando CSS inline com React - Aplicado via atributo style da tag usando sintaxe JS, ou seja, um objeto com propriedades
