@@ -1,0 +1,28 @@
+/* Folha de Estilos GLOBAL */
+
+/* Ajuste do Box Model com box-sizing */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Reset */
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Tamanho da letra */
+html {
+  font-size: 18px;
+}
+
+/* Tipo da letra */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
