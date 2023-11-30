@@ -1,8 +1,8 @@
 // Todos componentes react devem começar com letra maiuscula
 
 // Importação do componente
-import Cabecalho from "./components/Cabecalho";
-import Conteudo from "./components/Conteudo";
+import Cabecalho from "./components/Cabecalho/Cabecalho";
+import Conteudo from "./components/Conteudo/Conteudo";
 import Rodape from "./components/Rodape";
 
 // Vamos utilizar o componente (Fragment <></>) e envolver o return entre parenteses para retornar nosso html.

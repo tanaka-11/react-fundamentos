@@ -1,8 +1,9 @@
-import Artigo from "./Artigo";
+import Artigo from "../Artigo";
+import estilos from "./Conteudo.module.css";
 
 function Conteudo() {
   return (
-    <main>
+    <main className={estilos.formataConteudo}>
       <h2>Conteúdo da aplicação</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, odit? Aut

@@ -1,6 +1,12 @@
 function Menu() {
+  const alinhaMenu = {
+    display: "flex",
+    justifyContent: "space-evenly",
+    backgroundColor: "#4687c8",
+  };
+
   return (
-    <nav>
+    <nav style={alinhaMenu}>
       <a href="#">Home</a>
       <br />
       <a href="#">Produto</a>

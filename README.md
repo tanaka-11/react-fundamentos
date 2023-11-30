@@ -1,6 +1,6 @@
 # Fundamentos de React
 
-## Branch: 04-estilização-react
+## Branch: exercicio-estilizacao
 
 #### CSS in JS
 

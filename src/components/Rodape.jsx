@@ -16,11 +16,6 @@ function Rodape() {
       */}
         <h2 style={{ textAlign: "center" }}>@_Tanaka11_ 🥶</h2>
         <p className="destaque-texto centralizar">Fundamentos de React</p>
-
-        {/* Utilizando classes CSS in JS atraves da palavra-chave 'className' */}
-        <p className="centralizar">
-          Utilizando <b className="sombra">classes</b>
-        </p>
       </footer>
     </>
   );
