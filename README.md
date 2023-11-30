@@ -5,3 +5,5 @@
 #### CSS in JS
 
 - Utilizando CSS inline com React - Aplicado via atributo style da tag usando sintaxe JS, ou seja, um objeto com propriedades
+
+- Utilizando CSS externo e global -
