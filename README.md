@@ -4,4 +4,4 @@
 
 ### Informações gerais:
 
-Utilizando CSS com React - CSS in JS
+Utilizando CSS inline com React - CSS in JS
