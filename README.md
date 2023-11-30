@@ -1,7 +1,7 @@
 # Fundamentos de React
 
-## Branch: 03-sub-componentes
+## Branch: 04-estilização-react
 
 ### Informações gerais:
 
-Componentes aninhados
+Utilizando CSS com React - CSS in JS
