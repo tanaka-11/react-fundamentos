@@ -9,7 +9,8 @@ function Cabecalho() {
   return (
     <header>
       <h1>
-        Olá React! - <span className={estilos.sombra}>@_Tanaka11_</span> 🥶
+        <span className="destaque-texto">Olá</span> React! -{" "}
+        <span className={estilos.sombra}>@_Tanaka11_</span> 🥶
       </h1>
       <hr />
       {/* Importando o componente Menu dentro do componente Cabeçalho*/}

@@ -31,3 +31,9 @@ body {
 .sombra {
   box-shadow: black 0 2px 10px;
 }
+
+.destaque-texto {
+  background-color: #4d89c6;
+  padding: 4px;
+  border-radius: 12px;
+}

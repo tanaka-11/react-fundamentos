@@ -10,3 +10,8 @@ hr {
   border: none;
   background-color: #4687c8;
 }
+
+.destaque-texto {
+  text-shadow: 0 0 6px #3c5873;
+  text-transform: uppercase;
+}

@@ -16,7 +16,7 @@ function Rodape() {
        1º par de chaves representa que é um elemento JS e o 2º é do objeto para a tratativa de CSS inline 
       */}
         <h2 style={{ textAlign: "center" }}>@_Tanaka11_ 🥶</h2>
-        <p>Fundamentos de React</p>
+        <p className="destaque-texto">Fundamentos de React</p>
 
         {/* Utilizando classes CSS in JS atraves da palavra-chave 'className' */}
         <p>
