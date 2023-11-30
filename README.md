@@ -13,3 +13,9 @@ A renderização ocorre na seguinte sequencia:
 Para importar um componente individual precisamos passar o nome do componente dentro de uma tag
 
 Exemplo - `<Cabecalho />`
+
+---
+
+Comando de inicialização do servidor.
+
+`npm run dev -- --host 0.0.0.0 --open`
