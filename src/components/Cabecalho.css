@@ -1,0 +1,6 @@
+/* Folha de Estilos CSS Module */
+
+/* Sombra de Texto */
+.sombra {
+  text-shadow: #4687c8 0 0 10px;
+}
