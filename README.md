@@ -12,4 +12,6 @@
 
 #### Sobre as classes CSS in JS
 
-- Para classes com nome simples passamos com a sintaxe `<span className={estilos.sombra}>`, já para nomes compostos temos que usar a sintaxe `<span className={estilos["destaque-texto"]}>`
+- Para classes com nome simples passamos com a sintaxe `<span className={estilos.sombra}>`, já para nomes compostos temos que usar a sintaxe `<span className={estilos["destaque-texto"]}>`.
+
+- Combinar classes com Module CSS precisamos passar os atributos com a sintaxe de template string. (Exemplo no Cabecalho.jsx).

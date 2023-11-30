@@ -13,6 +13,11 @@ function Cabecalho() {
         <span className={estilos.sombra}>@_Tanaka11_</span> 🥶
       </h1>
       <hr />
+
+      <p className={`${estilos["destaque-texto"]} centralizar`}>
+        Classes CSS combinadas
+      </p>
+
       {/* Importando o componente Menu dentro do componente Cabeçalho*/}
       <Menu />
     </header>
