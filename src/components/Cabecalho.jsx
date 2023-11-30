@@ -9,7 +9,7 @@ function Cabecalho() {
   return (
     <header>
       <h1>
-        <span className="destaque-texto">Olá</span> React! -{" "}
+        <span className={estilos["destaque-texto"]}>Olá</span> React!
         <span className={estilos.sombra}>@_Tanaka11_</span> 🥶
       </h1>
       <hr />
