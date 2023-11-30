@@ -1,13 +1,15 @@
 // Importando o componente Menu
 import Menu from "./Menu";
-import "./Cabecalho.css";
+
+// Importação do módulo CSS como um objeto chamado 'estilos'
+import estilos from "./Cabecalho.module.css";
 
 // Criando um componente individual para o cabeçalho
 function Cabecalho() {
   return (
     <header>
       <h1>
-        Olá React! - <span className="sombra">@_Tanaka11_</span> 🥶
+        Olá React! - <span className={estilos.sombra}>@_Tanaka11_</span> 🥶
       </h1>
       <hr />
       {/* Importando o componente Menu dentro do componente Cabeçalho*/}

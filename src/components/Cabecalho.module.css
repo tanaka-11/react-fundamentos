@@ -4,3 +4,9 @@
 .sombra {
   text-shadow: #4687c8 0 0 10px;
 }
+
+hr {
+  height: 4px;
+  border: none;
+  background-color: #4687c8;
+}
