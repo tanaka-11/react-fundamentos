@@ -1,28 +1,35 @@
-// Importando o componente Menu
+/* Cabecalho.jsx */
 import Menu from "./Menu";
 
-// Importação do módulo CSS como um objeto chamado 'estilos'
-import estilos from "./Cabecalho.module.css";
+/* Importação da lib Styled Components */
+import styled from "styled-components";
 
-// Criando um componente individual para o cabeçalho
+const StyledCabecalho = styled.header`
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+
+  hr {
+    width: 50%;
+    background-color: cornflowerblue;
+    border: none;
+    height: 4px;
+    margin: 8px auto;
+  }
+`;
+
 function Cabecalho() {
   return (
-    <header>
-      <h1>
-        <span className={estilos["destaque-texto"]}>Olá</span> React!
-        <span className={estilos.sombra}>@_Tanaka11_</span> 🥶
-      </h1>
+    <StyledCabecalho>
+      <h1>Olá React! - @_Tanaka11_ 🥶</h1>
       <hr />
-
-      <p className={`${estilos["destaque-texto"]} centralizar`}>
-        Classes CSS combinadas
-      </p>
-
-      {/* Importando o componente Menu dentro do componente Cabeçalho*/}
       <Menu />
-    </header>
+    </StyledCabecalho>
   );
 }
 
-// Exportando o componente
 export default Cabecalho;
+
+
