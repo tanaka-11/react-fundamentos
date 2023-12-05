@@ -1,16 +1,8 @@
 # Fundamentos de React
 
-## Branch: 05-styled-components
+## Branch: 06-props
 
-#### CSS in JS
+### Propriedades
 
-Biblioteca (ou lib) muito comum para estilização CSS in JS de componentes.
-
-Para instalação, execute: npm install styled-components
-
-Para utilização, crie componentes estilizados usando a sintaxe:
-
-const StyledNome = styled.tag`
-  propriedadecss: valorDaPropriedade;
-  propriedadecss: valorDaPropriedade;
-`;
+São parâmetros com valores passados para os componentes React, normalmente usados para injeção de dados dinâmicos atraves dos `props`. Elas funcionam como objetos e cada `prop` criada passa a ter propriedades deste objeto.
+As `props` são criadas manualmente, mas também existe uma `prop` especial chamada `children` que permite ler o conteúdo que fica entre as tags de abertura e fechamento de um componente.
