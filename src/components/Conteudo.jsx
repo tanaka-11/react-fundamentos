@@ -32,7 +32,7 @@ const StyledConteudo = styled.main`
 `;
 
 function Conteudo() {
-  const dataNascimento = ["10/11/2001", "12/03/2003", "27/07/2001"];
+  const dataNascimento = ["10/11/2001", "12/03/2004", "27/07/2001"];
 
   return (
     <StyledConteudo>
@@ -46,29 +46,60 @@ function Conteudo() {
       </p>
 
       <div className="artigos">
+        {/* Passando props manualmente */}
         <Artigo
+          imagem={imagem1}
           icone="🥶"
           titulo="Tanaka"
           descricao="Mol Breck em busca de vitoria"
           data={dataNascimento[0]}
-          imagem={imagem1}
-        />
+        >
+          {/* Passando props children */}
+          <h4>Hobbys</h4>
+          <ul>
+            <li>Andar de bike</li>
+            <li>Jogar vôlei</li>
+            <li>Programar</li>
+          </ul>
+        </Artigo>
 
         <Artigo
+          imagem={imagem2}
           icone="😴"
           titulo="Kogici"
           descricao="Pretinha linda com sono acumulado"
           data={dataNascimento[1]}
-          imagem={imagem2}
-        />
+        >
+          <h4>Irmãos</h4>
+          <ol>
+            <li>Julia</li>
+            <li>Aline</li>
+            <li>Yasmin</li>
+            <li>Ivan</li>
+            <li>Sophia</li>
+          </ol>
+        </Artigo>
 
         <Artigo
+          imagem={imagem3}
           icone="🦾"
           titulo="Nando"
           descricao="Maromba noia com sindrome de heroi"
           data={dataNascimento[2]}
-          imagem={imagem3}
-        />
+        >
+          <section>
+            <h4>O Maromba da Vila Prudente</h4>
+            <details>
+              <summary>Capitulo 1</summary>
+              <p>A vinda do Maranhão</p>
+            </details>
+
+            <details>
+              <summary>Capitulo 2</summary>
+              <p>A entrada no Pantoja</p>
+            </details>
+          </section>
+        </Artigo>
       </div>
     </StyledConteudo>
   );
