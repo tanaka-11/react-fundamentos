@@ -27,6 +27,8 @@ const StyledConteudo = styled.main`
 `;
 
 function Conteudo() {
+  const dataNascimento = ["10/11/2001", "04/03/2003", "27/07/2001"];
+
   return (
     <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
@@ -39,9 +41,26 @@ function Conteudo() {
       </p>
 
       <div className="artigos">
-        <Artigo titulo="Tanaka" descricao="Mol Breck em busca de vitoria" />
-        <Artigo titulo="Kogici" descricao="Pretinha linda com sono acumulado" />
-        <Artigo titulo="Nando" descricao="Maromba noia com sindrome de heroi" />
+        <Artigo
+          icone="🥶"
+          titulo="Tanaka"
+          descricao="Mol Breck em busca de vitoria"
+          data={dataNascimento[0]}
+        />
+
+        <Artigo
+          icone="😴"
+          titulo="Kogici"
+          descricao="Pretinha linda com sono acumulado"
+          data={dataNascimento[1]}
+        />
+
+        <Artigo
+          icone="🦾"
+          titulo="Nando"
+          descricao="Maromba noia com sindrome de heroi"
+          data={dataNascimento[2]}
+        />
       </div>
     </StyledConteudo>
   );
