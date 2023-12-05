@@ -29,6 +29,8 @@ function Artigo(props) {
       <p>
         <b>Data Nascimento:</b> <time>{props.data}</time>
       </p>
+
+      <img src={props.imagem} alt="" />
     </StyledArtigo>
   );
 }

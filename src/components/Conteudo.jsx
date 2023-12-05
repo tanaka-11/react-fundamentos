@@ -2,6 +2,11 @@
 import Artigo from "./Artigo";
 import styled from "styled-components";
 
+// Importando os assets de imagens
+import imagem1 from "../assets/abra-o-livro.png";
+import imagem2 from "../assets/livro-magico.png";
+import imagem3 from "../assets/pilha-de-livros.png";
+
 const StyledConteudo = styled.main`
   width: 90vw;
   margin: 1rem auto;
@@ -27,7 +32,7 @@ const StyledConteudo = styled.main`
 `;
 
 function Conteudo() {
-  const dataNascimento = ["10/11/2001", "04/03/2003", "27/07/2001"];
+  const dataNascimento = ["10/11/2001", "12/03/2003", "27/07/2001"];
 
   return (
     <StyledConteudo>
@@ -46,6 +51,7 @@ function Conteudo() {
           titulo="Tanaka"
           descricao="Mol Breck em busca de vitoria"
           data={dataNascimento[0]}
+          imagem={imagem1}
         />
 
         <Artigo
@@ -53,6 +59,7 @@ function Conteudo() {
           titulo="Kogici"
           descricao="Pretinha linda com sono acumulado"
           data={dataNascimento[1]}
+          imagem={imagem2}
         />
 
         <Artigo
@@ -60,6 +67,7 @@ function Conteudo() {
           titulo="Nando"
           descricao="Maromba noia com sindrome de heroi"
           data={dataNascimento[2]}
+          imagem={imagem3}
         />
       </div>
     </StyledConteudo>
