@@ -26,7 +26,9 @@ function Artigo({ categoria, titulo, preco }) {
   return (
     <StyledArtigo>
       <h3>{categoria}</h3>
-      <p>{titulo}</p>
+      <p>
+        <b>{titulo}</b>
+      </p>
       <p>{preco}</p>
     </StyledArtigo>
   );
