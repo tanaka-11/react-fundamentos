@@ -15,11 +15,12 @@ const StyledArtigo = styled.article`
   }
 `;
 
-function Artigo() {
+// Definindo (Props) para o componente
+function Artigo(props) {
   return (
     <StyledArtigo>
-      <h3>Tanaka</h3>
-      <p>Mol breck</p>
+      <h3>{props.titulo}</h3>
+      <p>{props.descricao}</p>
     </StyledArtigo>
   );
 }

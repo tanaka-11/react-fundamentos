@@ -39,9 +39,9 @@ function Conteudo() {
       </p>
 
       <div className="artigos">
-        <Artigo />
-        <Artigo />
-        <Artigo />
+        <Artigo titulo="Tanaka" descricao="Mol Breck em busca de vitoria" />
+        <Artigo titulo="Kogici" descricao="Pretinha linda com sono acumulado" />
+        <Artigo titulo="Nando" descricao="Maromba noia com sindrome de heroi" />
       </div>
     </StyledConteudo>
   );
