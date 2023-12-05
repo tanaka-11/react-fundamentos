@@ -41,6 +41,7 @@ function Conteudo() {
         {cursos.map((curso) => {
           return (
             <Artigo
+              key={curso.id}
               titulo={curso.titulo}
               categoria={curso.categoria}
               preco={curso.preco.toLocaleString("pt-br", {
