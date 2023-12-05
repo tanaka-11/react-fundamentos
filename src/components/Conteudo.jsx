@@ -2,13 +2,11 @@
 import Artigo from "./Artigo";
 import styled from "styled-components";
 
-// Importando os assets de imagens
-import imagem1 from "../assets/abra-o-livro.png";
-import imagem2 from "../assets/livro-magico.png";
-import imagem3 from "../assets/pilha-de-livros.png";
+// Importação dos dados da API Fake
+import cursos from "../api/cursos.js";
 
 const StyledConteudo = styled.main`
-  width: 90vw;
+  width: 70%;
   margin: 1rem auto;
   background-color: cornflowerblue;
   padding: 1rem;
@@ -21,85 +19,37 @@ const StyledConteudo = styled.main`
 
   @media screen and (min-width: 650px) {
     .artigos {
+      width: 100%;
+      margin: auto;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
 
       & article {
-        width: 32%;
+        width: 48%;
       }
     }
   }
 `;
 
 function Conteudo() {
-  const dataNascimento = ["10/11/2001", "12/03/2004", "27/07/2001"];
-
   return (
     <StyledConteudo>
-      <h2>Conteúdo da aplicação</h2>
-
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
-        labore? Officia quae quo a quas excepturi distinctio sint voluptas
-        labore iste veniam possimus facere adipisci sit repellat, voluptate,
-        expedita aspernatur.
-      </p>
+      <h1>Desafio Props Dinamico</h1>
 
       <div className="artigos">
-        {/* Passando props manualmente */}
-        <Artigo
-          imagem={imagem1}
-          icone="🥶"
-          titulo="Tanaka"
-          descricao="Mol Breck em busca de vitoria"
-          data={dataNascimento[0]}
-        >
-          {/* Passando props children */}
-          <h4>Hobbys</h4>
-          <ul>
-            <li>Andar de bike</li>
-            <li>Jogar vôlei</li>
-            <li>Programar</li>
-          </ul>
-        </Artigo>
-
-        <Artigo
-          imagem={imagem2}
-          icone="😴"
-          titulo="Kogici"
-          descricao="Pretinha linda com sono acumulado"
-          data={dataNascimento[1]}
-        >
-          <h4>Irmãos</h4>
-          <ol>
-            <li>Julia</li>
-            <li>Aline</li>
-            <li>Yasmin</li>
-            <li>Ivan</li>
-            <li>Sophia</li>
-          </ol>
-        </Artigo>
-
-        <Artigo
-          imagem={imagem3}
-          icone="🦾"
-          titulo="Nando"
-          descricao="Maromba noia com sindrome de heroi"
-          data={dataNascimento[2]}
-        >
-          <section>
-            <h4>O Maromba da Vila Prudente</h4>
-            <details>
-              <summary>Capitulo 1</summary>
-              <p>A vinda do Maranhão</p>
-            </details>
-
-            <details>
-              <summary>Capitulo 2</summary>
-              <p>A entrada no Pantoja</p>
-            </details>
-          </section>
-        </Artigo>
+        {cursos.map((curso) => {
+          return (
+            <Artigo
+              titulo={curso.titulo}
+              categoria={curso.categoria}
+              preco={curso.preco.toLocaleString("pt-br", {
+                style: "currency",
+                currency: "BRL",
+              })}
+            />
+          );
+        })}
       </div>
     </StyledConteudo>
   );

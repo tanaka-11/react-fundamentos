@@ -1,8 +1,17 @@
 # Fundamentos de React
 
-## Branch: 06-props
+## Branch: 07-desafio-props
 
-### Propriedades
+1 - Crie uma nova branch chamada 07-desafio-props
+2 - Traga o cursos.js (criado nas aulas de revisão/reforço de JS) para uma nova pasta chamada api dentro de src
+3 - Vá para o Artigo.jsx e substitua toda a estrutura atual do <StyledArtigo> por uma estrutura com:
 
-São parâmetros com valores passados para os componentes React, normalmente usados para injeção de dados dinâmicos atraves dos `props`. Elas funcionam como objetos e cada `prop` criada passa a ter propriedades deste objeto.
-As `props` são criadas manualmente, mas também existe uma `prop` especial chamada `children` que permite ler o conteúdo que fica entre as tags de abertura e fechamento de um componente.
+- Elemento <h3> mostrando a categoria do curso
+- Elemento <p> mostrando o nome do curso
+- Elemento <p> mostrando o preço do curso formatado em Reais
+
+4 - Vá para Conteudo.jsx e:
+
+- Importe o cursos.js
+- Remova todos os componentes <Artigo> de dentro da div
+- Com ajuda do map, faça o componente <Artigo> ser carregado com os dados dinâmicos do cursos
