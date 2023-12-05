@@ -13,12 +13,22 @@ const StyledArtigo = styled.article`
   p {
     font-size: 1.1rem;
   }
+
+  .centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 // Definindo (Props) para o componente
 function Artigo(props) {
   return (
     <StyledArtigo>
+      <div className="centralizar">
+        <img src={props.imagem} />
+      </div>
+
       <h3>
         <span>{props.icone}</span>
         {props.titulo}
@@ -29,8 +39,6 @@ function Artigo(props) {
       <p>
         <b>Data Nascimento:</b> <time>{props.data}</time>
       </p>
-
-      <img src={props.imagem} alt="" />
     </StyledArtigo>
   );
 }
