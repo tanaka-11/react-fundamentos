@@ -4,6 +4,7 @@ import Menu from "./Menu";
 /* Importação da lib Styled Components */
 import styled from "styled-components";
 
+// Formatando com Tagged Template
 const StyledCabecalho = styled.header`
   background-color: black;
   color: white;
@@ -31,5 +32,3 @@ function Cabecalho() {
 }
 
 export default Cabecalho;
-
-
