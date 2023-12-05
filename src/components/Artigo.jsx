@@ -39,6 +39,9 @@ function Artigo(props) {
       <p>
         <b>Data Nascimento:</b> <time>{props.data}</time>
       </p>
+
+      {/* Passando props children criado no componente Conteudo */}
+      {props.children}
     </StyledArtigo>
   );
 }
