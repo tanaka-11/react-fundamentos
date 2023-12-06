@@ -28,11 +28,18 @@ const StyledCabecalho = styled.header`
 
 function Cabecalho() {
   // Usando gerenciador de states, definindo a chamada de uma função especial do React 'useState', neste caso criamos uma variavel que representa o valor do state (titulo) e uma função responsavel pela atualização (setTitulo)
-  const [titulo, setTitulo] = useState("Olá React! - @_Tanaka11_ 🥶");
+
+  // Valor inicial do titulo
+  const [titulo, setTitulo] = useState("Olá React! 🥶");
+
+  // Criado função para mudança no h1 atraves do setTitulo
+  const mudarTitulo = () => {
+    setTitulo("@_Tanaka11_ 🥶");
+  };
 
   return (
     <StyledCabecalho>
-      <h1>{titulo}</h1>
+      <h1 onClick={mudarTitulo}> {titulo} </h1>
       <hr />
       <Menu />
     </StyledCabecalho>
