@@ -22,14 +22,25 @@ const StyledArtigo = styled.article`
 `;
 
 // Props com Desestruturação
-function Artigo({ categoria, titulo, preco }) {
+function Artigo(props) {
+  const formatarPreco = (valor) => {
+    return valor.toLocaleString("pt-br", {
+      style: "currency",
+      currency: "BRL",
+    });
+  };
+
   return (
     <StyledArtigo>
-      <h3>{categoria}</h3>
+      <h3> {props.categoria} </h3>
+
       <p>
-        <b>{titulo}</b>
+        <b>Curso:</b> {props.titulo}
       </p>
-      <p>{preco}</p>
+
+      <p>
+        <b>Preço:</b> {formatarPreco(props.preco)}
+      </p>
     </StyledArtigo>
   );
 }

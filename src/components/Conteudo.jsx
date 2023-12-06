@@ -38,19 +38,14 @@ function Conteudo() {
       <h1>Desafio Props Dinamico</h1>
 
       <div className="artigos">
-        {cursos.map((curso) => {
-          return (
-            <Artigo
-              key={curso.id}
-              titulo={curso.titulo}
-              categoria={curso.categoria}
-              preco={curso.preco.toLocaleString("pt-br", {
-                style: "currency",
-                currency: "BRL",
-              })}
-            />
-          );
-        })}
+        {cursos.map((curso) => (
+          <Artigo
+            key={curso.id}
+            categoria={curso.categoria}
+            titulo={curso.titulo}
+            preco={curso.preco}
+          />
+        ))}
       </div>
     </StyledConteudo>
   );
