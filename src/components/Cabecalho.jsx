@@ -34,7 +34,11 @@ function Cabecalho() {
 
   // Criado função para mudança no h1 atraves do setTitulo
   const mudarTitulo = () => {
-    setTitulo("@_Tanaka11_ 🥶");
+    setTitulo(titulo === "Olá React! 🥶" ? "@_Tanaka11_" : "Olá React! 🥶");
+  };
+
+  const mudaCor = () => {
+    setCor(corOriginal === "white" ? "#ced8e2" : "white");
   };
 
   return (
