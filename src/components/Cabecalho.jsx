@@ -12,6 +12,10 @@ const StyledCabecalho = styled.header`
   font-weight: bold;
   text-align: center;
 
+  h1 {
+    padding: 20px;
+  }
+
   hr {
     width: 50%;
     background-color: cornflowerblue;
