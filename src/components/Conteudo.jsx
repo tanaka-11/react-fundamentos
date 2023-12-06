@@ -6,11 +6,16 @@ import styled from "styled-components";
 import cursos from "../api/cursos.js";
 
 const StyledConteudo = styled.main`
-  width: 70%;
-  margin: 1rem auto;
+  width: 100%;
   background-color: cornflowerblue;
   padding: 1rem;
   box-shadow: darkblue 0 0 1px inset;
+
+  h1 {
+    text-align: center;
+    text-shadow: black 1px 2px 2px;
+    color: white;
+  }
 
   h2,
   p {
