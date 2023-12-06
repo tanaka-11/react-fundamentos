@@ -6,9 +6,9 @@ import styled from "styled-components";
 import cursos from "../api/cursos.js";
 
 const StyledConteudo = styled.main`
-  width: 70%;
-  margin: 1rem auto;
-  background-color: cornflowerblue;
+  width: 100%;
+  margin: auto;
+  background-color: #83beec;
   padding: 1rem;
   box-shadow: darkblue 0 0 1px inset;
 
