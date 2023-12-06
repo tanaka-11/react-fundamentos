@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { useState } from "react";
+
 const StyledArtigo = styled.article`
   background-color: white;
   padding: 1rem;
@@ -21,7 +23,7 @@ const StyledArtigo = styled.article`
   }
 `;
 
-// Props com Desestruturação
+// Props sem Desestruturação
 function Artigo(props) {
   const formatarPreco = (valor) => {
     return valor.toLocaleString("pt-br", {
@@ -30,8 +32,14 @@ function Artigo(props) {
     });
   };
 
+  // State de mudança do background
+  const [corOriginal, setCor] = useState("white");
+
+  const mudaCor = () => {
+    setCor(corOriginal === "white" ? "grey" : "white");
+  };
   return (
-    <StyledArtigo>
+    <StyledArtigo style={{ backgroundColor: corOriginal }} onClick={mudaCor}>
       <h3> {props.categoria} </h3>
 
       <p>
