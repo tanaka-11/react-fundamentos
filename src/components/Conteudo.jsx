@@ -72,7 +72,7 @@ function Conteudo() {
 
       <div className="eventoPai">
         <button onClick={exemplo2}>Clique Aqui</button>
-        {/* Acionando o evento Pai através do Conteudo(componente pai)*/}
+        {/* Acionando o evento Pai através do Conteudo(componente pai) com uma função intermediaria */}
         <button onClick={() => exemplo3("Evento Pai")}>Evento Pai</button>
       </div>
 
