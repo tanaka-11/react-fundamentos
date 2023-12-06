@@ -1,4 +1,5 @@
 /* Cabecalho.jsx */
+import { useState } from "react";
 import Menu from "./Menu";
 
 /* Importação da lib Styled Components */
@@ -26,9 +27,12 @@ const StyledCabecalho = styled.header`
 `;
 
 function Cabecalho() {
+  // Usando gerenciador de states, definindo a chamada de uma função especial do React 'useState', neste caso criamos uma variavel que representa o valor do state (titulo) e uma função responsavel pela atualização (setTitulo)
+  const [titulo, setTitulo] = useState("Olá React! - @_Tanaka11_ 🥶");
+
   return (
     <StyledCabecalho>
-      <h1>Olá React! - @_Tanaka11_ 🥶</h1>
+      <h1>{titulo}</h1>
       <hr />
       <Menu />
     </StyledCabecalho>

@@ -6,6 +6,8 @@
 
 O uso de `states` permite que o React reagir às mudanças de renderização dos componentes.
 
+Funções iniciadas com a palavra-chave 'use' são conhecidos como React Hooks.
+
 ### Exemplos de mudanças que podem ser gerenciadas por states
 
 - Captura de dados de formulário
