@@ -7,13 +7,14 @@ import cursos from "../api/cursos.js";
 
 const StyledConteudo = styled.main`
   width: 100%;
-  background-color: cornflowerblue;
+  background-color: #4869a5;
   padding: 1rem;
   box-shadow: darkblue 0 0 1px inset;
 
   h1 {
+    margin: 20px;
     text-align: center;
-    text-shadow: black 1px 2px 2px;
+    text-shadow: black 4px 2px 2px;
     color: white;
   }
 
