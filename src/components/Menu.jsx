@@ -23,6 +23,7 @@ const StyledMenu = styled.nav`
       background-color: cornflowerblue;
       color: black;
       transform: scale(1.05);
+      padding: 1rem;
     }
   }
 `;
