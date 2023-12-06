@@ -25,6 +25,10 @@ const StyledArtigo = styled.article`
 
 // Props sem Desestruturação
 function Artigo(props) {
+  // State de mudança do background
+  const [corOriginal, setCor] = useState("white");
+
+  // Função de formatação de preço
   const formatarPreco = (valor) => {
     return valor.toLocaleString("pt-br", {
       style: "currency",
@@ -32,12 +36,11 @@ function Artigo(props) {
     });
   };
 
-  // State de mudança do background
-  const [corOriginal, setCor] = useState("white");
-
+  // Função da mudança do background
   const mudaCor = () => {
-    setCor(corOriginal === "white" ? "lightgrey" : "white");
+    setCor(corOriginal === "white" ? "#ced8e2" : "white");
   };
+
   return (
     <StyledArtigo style={{ backgroundColor: corOriginal }} onClick={mudaCor}>
       <h3> {props.categoria} </h3>
