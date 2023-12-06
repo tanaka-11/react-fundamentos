@@ -32,7 +32,8 @@ function Artigo(props) {
 
   return (
     <StyledArtigo>
-      <h3> {props.categoria} </h3>
+      {/* Evento Filho passado atraves da prop no componente Pai */}
+      <h3 onClick={props.handleClick}> {props.categoria} </h3>
 
       <p>
         <b>Curso:</b> {props.titulo}
