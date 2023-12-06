@@ -63,7 +63,7 @@ function Conteudo() {
   };
 
   const exemplo3 = (valor) => {
-    alert("Curso - " + valor);
+    alert("Exemplo 3 - " + valor);
   };
 
   return (
@@ -72,8 +72,8 @@ function Conteudo() {
 
       <div className="eventoPai">
         <button onClick={exemplo2}>Clique Aqui</button>
-        {/* Acionando o evento através do Conteudo(componente pai)*/}
-        <button onClick={exemplo3}>Evento Pai</button>
+        {/* Acionando o evento Pai através do Conteudo(componente pai)*/}
+        <button onClick={() => exemplo3("Evento Pai")}>Evento Pai</button>
       </div>
 
       <div className="artigos">
