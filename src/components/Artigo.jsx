@@ -36,7 +36,7 @@ function Artigo(props) {
   const [corOriginal, setCor] = useState("white");
 
   const mudaCor = () => {
-    setCor(corOriginal === "white" ? "grey" : "white");
+    setCor(corOriginal === "white" ? "lightgrey" : "white");
   };
   return (
     <StyledArtigo style={{ backgroundColor: corOriginal }} onClick={mudaCor}>
