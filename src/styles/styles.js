@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledRodape = styled.footer`
-  background-image: linear-gradient(black, cornflowerblue);
+  background-color: black;
   color: white;
   height: 20vh;
   display: flex;
