@@ -38,7 +38,7 @@ function Artigo(props) {
 
   // Função da mudança do background
   const mudaCor = () => {
-    setCor(corOriginal === "white" ? "#ced8e2" : "white");
+    setCor(corOriginal === "white" ? "#ebf5ff" : "white");
   };
 
   return (
