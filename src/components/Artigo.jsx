@@ -21,7 +21,7 @@ const StyledArtigo = styled.article`
   }
 `;
 
-// Props com Desestruturação
+// Props sem Desestruturação
 function Artigo(props) {
   const formatarPreco = (valor) => {
     return valor.toLocaleString("pt-br", {
