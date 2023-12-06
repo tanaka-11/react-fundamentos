@@ -41,7 +41,7 @@ const StyledConteudo = styled.main`
 function Conteudo() {
   return (
     <StyledConteudo>
-      <h1>Desafio Props Dinamico</h1>
+      <h1>Desafio Props Dinâmico</h1>
 
       <div className="artigos">
         {cursos.map((curso) => (
