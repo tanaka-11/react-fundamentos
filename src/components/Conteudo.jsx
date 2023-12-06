@@ -1,9 +1,13 @@
 /* Conteudo.jsx */
+import { useState } from "react";
+
 import Artigo from "./Artigo";
 import styled from "styled-components";
 
 // Importação dos dados da API Fake
 import cursos from "../api/cursos.js";
+
+
 
 const StyledConteudo = styled.main`
   width: 100%;
@@ -14,7 +18,7 @@ const StyledConteudo = styled.main`
   h1 {
     margin: 20px;
     text-align: center;
-    text-shadow: black 4px 2px 2px;
+    text-shadow: black 2px 2px 2px;
     color: white;
   }
 
@@ -39,9 +43,19 @@ const StyledConteudo = styled.main`
 `;
 
 function Conteudo() {
+  // Valor inicial do titulo
+  const [titulo, setTitulo] = useState("Desafio Props Dinâmico");
+
+  // Criado função para mudança no h1 atraves do setTitulo
+  const mudarTitulo = () => {
+    setTitulo(titulo === "Desafio Props Dinâmico" ? "Cursos" : "Desafio Props Dinâmico");
+  };
+
   return (
     <StyledConteudo>
-      <h1>Desafio Props Dinâmico</h1>
+      
+
+      <h1 onClick={mudarTitulo}> {titulo} </h1>
 
       <div className="artigos">
         {cursos.map((curso) => (

@@ -15,6 +15,7 @@ const StyledCabecalho = styled.header`
 
   h1 {
     padding: 20px;
+    text-shadow: cornflowerblue 1px 2px 1px;
   }
 
   hr {
@@ -35,10 +36,6 @@ function Cabecalho() {
   // Criado função para mudança no h1 atraves do setTitulo
   const mudarTitulo = () => {
     setTitulo(titulo === "Olá React! 🥶" ? "@_Tanaka11_" : "Olá React! 🥶");
-  };
-
-  const mudaCor = () => {
-    setCor(corOriginal === "white" ? "#ced8e2" : "white");
   };
 
   return (
