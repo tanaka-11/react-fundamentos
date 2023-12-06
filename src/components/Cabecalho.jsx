@@ -4,7 +4,7 @@ import Menu from "./Menu";
 /* Importação da lib Styled Components */
 import styled from "styled-components";
 
-// Formatando com Tagged Template
+// Formatando CSS com Tagged Template
 const StyledCabecalho = styled.header`
   background-color: black;
   color: white;
@@ -24,7 +24,10 @@ const StyledCabecalho = styled.header`
 function Cabecalho() {
   return (
     <StyledCabecalho>
-      <h1>Olá React! - @_Tanaka11_ 🥶</h1>
+      {/* Manipulando evento diretamente pelo componente com uma arrow fuction para fazer a intermediação */}
+      <h1 onClick={() => alert("@_tanaka11_ segue nois")}>
+        Olá React! - @_Tanaka11_ 🥶
+      </h1>
       <hr />
       <Menu />
     </StyledCabecalho>
