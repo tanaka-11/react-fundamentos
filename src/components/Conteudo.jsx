@@ -91,6 +91,9 @@ function Conteudo() {
     (curso) => curso.categoria === categoria || categoria === null
   );
 
+  // Função de contagem de cursos
+  const quantidade = cursosFiltrados.length;
+
   return (
     <StyledConteudo>
       <h1 onClick={mudarTitulo}> {titulo} </h1>
@@ -115,11 +118,27 @@ function Conteudo() {
             </button>
           )}
         </p>
+        <br />
 
         {/* Passando uma função de curto-circuito utilizando && (renderização condicional) a tag so será exibida se o state categoria existir(não null)*/}
         {categoria && (
           <p style={{ textAlign: "center" }}>
             Você escolheu - <b>{categoria}</b>
+          </p>
+        )}
+
+        <br />
+
+        <p>
+          Quantidade de cursos <b>{quantidade}</b>
+        </p>
+
+        <br />
+
+        {/* Se quantidade de cursos for igual a 0 mostre a mensagem */}
+        {quantidade === 0 && (
+          <p style={{ color: "darkred", textAlign: "center" }}>
+            Não há cursos desta categoria!
           </p>
         )}
       </div>
