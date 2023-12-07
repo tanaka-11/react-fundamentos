@@ -1,13 +1,13 @@
 /* Conteudo.jsx */
 import { useState } from "react";
-import Artigo from "./Artigo";
+import Artigo from "./Artigo.jsx";
 import styled from "styled-components";
 
 // Importação dos dados da API Fake
 import cursos from "../api/cursos.js";
 
 // CSS
-const StyledConteudo = styled.main`
+const StyledCursos = styled.section`
   .filtros {
     margin: 0.6rem;
     padding: 0.4rem;
@@ -43,7 +43,7 @@ const StyledConteudo = styled.main`
   }
 `;
 
-function Conteudo() {
+function Cursos() {
   // Aplicando gerenciador de state para aplicação do filtro, começando como null pois nenhuma categoria começa selecionada
   const [categoria, setCategoria] = useState(null);
 
@@ -55,6 +55,7 @@ function Conteudo() {
     setCategoria(categoriaEscolhida);
   };
 
+  // Função limpaFiltro
   const limparFiltro = () => {
     setCategoria(null);
   };
@@ -78,7 +79,7 @@ function Conteudo() {
   const quantidade = cursosFiltrados.length;
 
   return (
-    <StyledConteudo>
+    <StyledCursos>
       <h1 onClick={mudarTitulo}> {titulo} </h1>
 
       {/* Passando a função de filtros */}
@@ -109,14 +110,16 @@ function Conteudo() {
           </p>
         )}
 
-        <br />
-
         {/* Se quantidade de cursos for igual a 0 mostre a mensagem */}
         {quantidade === 0 && (
           <p style={{ color: "darkred", textAlign: "center" }}>
             Não há cursos desta categoria!
           </p>
         )}
+
+        <p>
+          Quantidade de cursos: <b>{quantidade}</b>
+        </p>
       </div>
 
       <div className="artigos">
@@ -129,8 +132,8 @@ function Conteudo() {
           />
         ))}
       </div>
-    </StyledConteudo>
+    </StyledCursos>
   );
 }
 
-export default Conteudo;
+export default Cursos;
