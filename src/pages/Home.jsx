@@ -1,5 +1,11 @@
+import Cursos from "../components/Cursos";
+
 function Home() {
-  return <h1>Bem-Vindo</h1>;
+  return (
+    <>
+      <Cursos />
+    </>
+  );
 }
 
 export default Home;

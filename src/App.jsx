@@ -2,7 +2,6 @@
 
 // Importação dos componentes
 import Cabecalho from "./components/Cabecalho";
-import Conteudo from "./components/Conteudo";
 import Rodape from "./components/Rodape";
 
 // Importação dos componentes dentro do pages
@@ -11,21 +10,28 @@ import Produtos from "./pages/Produtos";
 import Contato from "./pages/Contato";
 import Container from "./components/Container";
 
+// Importação de componentes do React Route
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 // Vamos utilizar o componente (Fragment <></>) e envolver o return entre parenteses para retornar nosso html.
 function App() {
   return (
     <>
-      {/* Importando o componente individual envolvido por uma tag */}
-      <Cabecalho />
+      {/* Envolvendo todas tags com BrowserRouter*/}
+      <BrowserRouter>
+        <Cabecalho />
 
-      {/* Container com Children */}
-      <Container>
-        <Home />
-        <Produtos />
-        <Contato />
-      </Container>
+        {/* Container com Children e Routes com configuração de rotas */}
+        <Container>
+          <Routes>
+            <Route Component={Home} exact path="/" />
+            <Route Component={Produtos} path="/produtos" />
+            <Route Component={Contato} path="/contato" />
+          </Routes>
+        </Container>
 
-      <Rodape />
+        <Rodape />
+      </BrowserRouter>
     </>
   );
 }
