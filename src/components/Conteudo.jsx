@@ -37,7 +37,7 @@ const StyledConteudo = styled.main`
   }
 
   .filtros button {
-    background-color: #253551;
+    background-color: #304567;
     border-radius: 12px;
     color: white;
     padding: 12px;
@@ -83,6 +83,11 @@ function Conteudo() {
     );
   };
 
+  // Gerando um novo array de cursos filtrados
+  const cursosFiltrados = cursos.filter(
+    (curso) => curso.categoria === categoria
+  );
+
   return (
     <StyledConteudo>
       <h1 onClick={mudarTitulo}> {titulo} </h1>
@@ -106,7 +111,7 @@ function Conteudo() {
       </div>
 
       <div className="artigos">
-        {cursos.map((curso) => (
+        {cursosFiltrados.map((curso) => (
           <Artigo
             key={curso.id}
             categoria={curso.categoria}
