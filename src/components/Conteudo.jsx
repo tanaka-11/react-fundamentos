@@ -118,7 +118,6 @@ function Conteudo() {
             </button>
           )}
         </p>
-        <br />
 
         {/* Passando uma função de curto-circuito utilizando && (renderização condicional) a tag so será exibida se o state categoria existir(não null)*/}
         {categoria && (
@@ -126,12 +125,6 @@ function Conteudo() {
             Você escolheu - <b>{categoria}</b>
           </p>
         )}
-
-        <br />
-
-        <p>
-          Quantidade de cursos <b>{quantidade}</b>
-        </p>
 
         <br />
 
