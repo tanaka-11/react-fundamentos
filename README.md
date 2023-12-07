@@ -1,6 +1,6 @@
 # Fundamentos de React
 
-## Branch: 09-gerenciamento-de-estados-dos-componentes
+## Branch: 10-filtros-usando-evento-e-states
 
 `Estado` ou `State` é uma propriedade especial de um componente que pode ser alterado ao longo do tempo. Por exemplo, um componente que exibe um contador de **_likes_** precisa de um gerenciamento de `states` para controlar a quantidade de **_likes_** recebidos.
 

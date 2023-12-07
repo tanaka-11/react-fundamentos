@@ -7,8 +7,7 @@ import styled from "styled-components";
 // Importação dos dados da API Fake
 import cursos from "../api/cursos.js";
 
-
-
+// CSS
 const StyledConteudo = styled.main`
   width: 100%;
   background-color: #4869a5;
@@ -27,6 +26,26 @@ const StyledConteudo = styled.main`
     padding: 0.2rem 0;
   }
 
+  .filtros {
+    margin: 0.6rem;
+    padding: 0.6rem;
+    border-top: #2e4a7e solid 2px;
+    border-bottom: #2e4a7e solid 2px;
+    font-size: 22px;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .filtros button {
+    background-color: #568bed;
+    border-radius: 12px;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    margin: 0.5rem;
+  }
+
   @media screen and (min-width: 650px) {
     .artigos {
       width: 100%;
@@ -43,19 +62,45 @@ const StyledConteudo = styled.main`
 `;
 
 function Conteudo() {
+  // Aplicando gerenciador de state para aplicação do filtro, começando como null pois nenhuma categoria começa selecionada
+  const [categoria, setCategoria] = useState(null);
+
+  // Função para aplicação de filtro
+  const aplicarFiltro = (event) => {
+    // Capturando o texto escrito em cada botão
+    const categoriaEscolhida = event.currentTarget.innerText;
+    // e então passamos este texto para o state de categoria
+    setCategoria(categoriaEscolhida);
+  };
+
   // Valor inicial do titulo
   const [titulo, setTitulo] = useState("Desafio Props Dinâmico");
 
-  // Criado função para mudança no h1 atraves do setTitulo
+  // Função para mudança no h1 atraves do setTitulo
   const mudarTitulo = () => {
-    setTitulo(titulo === "Desafio Props Dinâmico" ? "Cursos" : "Desafio Props Dinâmico");
+    setTitulo(
+      titulo === "Desafio Props Dinâmico" ? "Cursos" : "Desafio Props Dinâmico"
+    );
   };
 
   return (
     <StyledConteudo>
-      
-
       <h1 onClick={mudarTitulo}> {titulo} </h1>
+
+      {/* Passando a função de filtros */}
+      <div className="filtros">
+        <p>
+          <b>Filtrar por</b>
+          <br />
+          <button onClick={aplicarFiltro}>Front-End</button>
+          <button onClick={aplicarFiltro}>Back-End</button>
+          <button onClick={aplicarFiltro}>Design</button>
+        </p>
+
+        <p>
+          Você escolheu - <b>{categoria}</b>
+        </p>
+      </div>
 
       <div className="artigos">
         {cursos.map((curso) => (
