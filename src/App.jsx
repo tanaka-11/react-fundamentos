@@ -18,6 +18,7 @@ function App() {
       {/* Importando o componente individual envolvido por uma tag */}
       <Cabecalho />
 
+      {/* Container com Children */}
       <Container>
         <Home />
         <Produtos />
