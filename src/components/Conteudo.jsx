@@ -30,9 +30,9 @@ const StyledConteudo = styled.main`
     padding: 0.4rem;
     border-top: #2e4a7e solid 2px;
     border-bottom: #2e4a7e solid 2px;
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
-    flex-wrap: wrap;
+    text-shadow: #3f5e7d 1px 2px 1px;
   }
 
   .filtros button {
@@ -104,15 +104,21 @@ function Conteudo() {
           <button onClick={aplicarFiltro}>Back-End</button>
           <button onClick={aplicarFiltro}>Design</button>
           <button onClick={aplicarFiltro}>Mobile</button>
+          <button onClick={aplicarFiltro}>Banco de Dados</button>
 
           {categoria && (
-            <button onClick={limparFiltro}>Limpar Filtro 🧼</button>
+            <button
+              onClick={limparFiltro}
+              style={{ backgroundColor: "darkred" }}
+            >
+              Limpar Filtro 🧼
+            </button>
           )}
         </p>
 
         {/* Passando uma função de curto-circuito utilizando && (renderização condicional) a tag so será exibida se o state categoria existir(não null)*/}
         {categoria && (
-          <p>
+          <p style={{ textAlign: "center" }}>
             Você escolheu - <b>{categoria}</b>
           </p>
         )}
