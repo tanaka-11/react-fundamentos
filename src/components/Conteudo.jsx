@@ -1,6 +1,5 @@
 /* Conteudo.jsx */
 import { useState } from "react";
-
 import Artigo from "./Artigo";
 import styled from "styled-components";
 
@@ -28,7 +27,7 @@ const StyledConteudo = styled.main`
 
   .filtros {
     margin: 0.6rem;
-    padding: 0.6rem;
+    padding: 0.4rem;
     border-top: #2e4a7e solid 2px;
     border-bottom: #2e4a7e solid 2px;
     font-size: 22px;
@@ -83,9 +82,9 @@ function Conteudo() {
     );
   };
 
-  // Gerando um novo array de cursos filtrados
+  // Gerando um novo array de cursos filtrados ou se o state for null mostre sem o filtro
   const cursosFiltrados = cursos.filter(
-    (curso) => curso.categoria === categoria
+    (curso) => curso.categoria === categoria || categoria === null
   );
 
   return (
