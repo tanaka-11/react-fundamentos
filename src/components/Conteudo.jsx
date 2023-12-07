@@ -72,6 +72,10 @@ function Conteudo() {
     setCategoria(categoriaEscolhida);
   };
 
+  const limparFiltro = () => {
+    setCategoria(null);
+  };
+
   // Valor inicial do titulo
   const [titulo, setTitulo] = useState("Desafio Props Dinâmico");
 
@@ -99,6 +103,8 @@ function Conteudo() {
           <button onClick={aplicarFiltro}>Front-End</button>
           <button onClick={aplicarFiltro}>Back-End</button>
           <button onClick={aplicarFiltro}>Design</button>
+          <button onClick={aplicarFiltro}>Mobile</button>
+          <button onClick={limparFiltro}>Limpar Filtro 🧼</button>
         </p>
 
         {/* Passando uma função de curto-circuito utilizando && (renderização condicional) a tag so será exibida se o state categoria existir(não null)*/}
