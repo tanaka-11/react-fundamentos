@@ -37,7 +37,7 @@ const StyledConteudo = styled.main`
   }
 
   .filtros button {
-    background-color: #568bed;
+    background-color: #253551;
     border-radius: 12px;
     color: white;
     padding: 12px;
@@ -97,9 +97,12 @@ function Conteudo() {
           <button onClick={aplicarFiltro}>Design</button>
         </p>
 
-        <p>
-          Você escolheu - <b>{categoria}</b>
-        </p>
+        {/* Passando uma função de curto-circuito utilizando && (renderização condicional) a tag so será exibida se o state categoria existir(não null)*/}
+        {categoria && (
+          <p>
+            Você escolheu - <b>{categoria}</b>
+          </p>
+        )}
       </div>
 
       <div className="artigos">
