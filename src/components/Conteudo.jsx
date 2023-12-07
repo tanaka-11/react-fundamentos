@@ -8,23 +8,6 @@ import cursos from "../api/cursos.js";
 
 // CSS
 const StyledConteudo = styled.main`
-  width: 100%;
-  background-color: #4869a5;
-  padding: 1rem;
-  box-shadow: darkblue 0 0 1px inset;
-
-  h1 {
-    margin: 20px;
-    text-align: center;
-    text-shadow: black 2px 2px 2px;
-    color: white;
-  }
-
-  h2,
-  p {
-    padding: 0.2rem 0;
-  }
-
   .filtros {
     margin: 0.6rem;
     padding: 0.4rem;
