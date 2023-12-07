@@ -1,6 +1,9 @@
 /* Menu.jsx */
 import styled from "styled-components";
 
+// Importação do nav do react router
+import { NavLink } from "react-router-dom";
+
 const StyledMenu = styled.nav`
   height: 60px;
   display: flex;
@@ -31,9 +34,9 @@ const StyledMenu = styled.nav`
 function Menu() {
   return (
     <StyledMenu>
-      <a href="/">Home</a>
-      <a href="/produtos">Produtos</a>
-      <a href="/contato">Contato</a>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/produtos">Produtos</NavLink>
+      <NavLink to="/contato">Contato</NavLink>
     </StyledMenu>
   );
 }
