@@ -104,7 +104,10 @@ function Conteudo() {
           <button onClick={aplicarFiltro}>Back-End</button>
           <button onClick={aplicarFiltro}>Design</button>
           <button onClick={aplicarFiltro}>Mobile</button>
-          <button onClick={limparFiltro}>Limpar Filtro 🧼</button>
+
+          {categoria && (
+            <button onClick={limparFiltro}>Limpar Filtro 🧼</button>
+          )}
         </p>
 
         {/* Passando uma função de curto-circuito utilizando && (renderização condicional) a tag so será exibida se o state categoria existir(não null)*/}
