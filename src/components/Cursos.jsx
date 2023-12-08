@@ -82,11 +82,11 @@ function Cursos() {
     <StyledCursos>
       <h1 onClick={mudarTitulo}> {titulo} </h1>
 
-      {/* Passando a função de filtros */}
       <div className="filtros">
         <p>
           <b>Filtrar por</b>
           <br />
+          {/* Passando a função de filtros */}
           <button onClick={aplicarFiltro}>Front-End</button>
           <button onClick={aplicarFiltro}>Back-End</button>
           <button onClick={aplicarFiltro}>Design</button>
