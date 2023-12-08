@@ -1,14 +1,20 @@
-/* Menu.jsx */
+// Importação do style
 import styled from "styled-components";
 
 // Importação do nav do react router
 import { NavLink } from "react-router-dom";
 
+// CSS
 const StyledMenu = styled.nav`
   height: 60px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  .active {
+    background-color: black;
+    color: cornflowerblue;
+  }
 
   a {
     color: white;
