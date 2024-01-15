@@ -5,9 +5,12 @@ function Produtos() {
   // O state "produtos" inicia como um array vazio e só após o carregamento dos dados da API que ele será preenchido
   const [produtos, setProdutos] = useState([]);
 
-  // Gerenciando o efeito colateral do componente com o useEffect atraves de uma função callback para o carregamento de dados da API
+  // State de "loading" com boolean
+  const [loading, setLoading] = useState(true);
 
-  /* Funcionamento do useEffect
+  /* Gerenciando o efeito colateral do componente com o useEffect atraves de uma função callback para o carregamento de dados da API
+
+   Funcionamento do useEffect
    1º useEffect é carregado uma vez apos a montagem da page.
    2º ele executa a função "carregarDados"
    3º atualização do state
@@ -19,7 +22,9 @@ function Produtos() {
         const resposta = await fetch(`https://fakestoreapi.com/products`);
         const dados = await resposta.json();
         console.log(dados);
+
         setProdutos(dados);
+        setLoading(false);
       } catch (error) {
         console.error("Erro: " + error);
       }
@@ -32,23 +37,27 @@ function Produtos() {
     <article>
       <h1>Produtos</h1>
 
-      {/* Exibindo dados atraves do state com o loop map */}
-      {produtos.map((produto) => {
-        return (
-          <section key={produto.id}>
-            <h3>Produto: {produto.title}</h3>
+      {/* Exibindo dados atraves do state com o loop map e metodo de loading com itenario (Se carregamento for verdadeiro então mostre o paragrafo, senão mostre os dados atraves do map)*/}
+      {loading ? (
+        <p>Carregando...</p>
+      ) : (
+        produtos.map((produto) => {
+          return (
+            <section key={produto.id}>
+              <h3>Produto: {produto.title}</h3>
 
-            <p>
-              <b>Preço:</b> {produto.price}
-            </p>
+              <p>
+                <b>Preço:</b> {produto.price}
+              </p>
 
-            <p>
-              <b>Descrição:</b> {produto.description}
-            </p>
-            <br />
-          </section>
-        );
-      })}
+              <p>
+                <b>Descrição:</b> {produto.description}
+              </p>
+              <br />
+            </section>
+          );
+        })
+      )}
     </article>
   );
 }
