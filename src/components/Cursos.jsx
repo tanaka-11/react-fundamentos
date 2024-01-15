@@ -1,5 +1,7 @@
-/* Conteudo.jsx */
+/* React Hook */
 import { useState } from "react";
+
+// Importação do artigo e styled
 import Artigo from "./Artigo.jsx";
 import styled from "styled-components";
 
