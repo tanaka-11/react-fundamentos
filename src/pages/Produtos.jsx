@@ -28,7 +28,29 @@ function Produtos() {
     carregarDados();
   }, []); // Apos o 1º parametro(função) passar o 2º parametro(lista de dependencias)
 
-  return <h1>Produtos</h1>;
+  return (
+    <article>
+      <h1>Produtos</h1>
+
+      {/* Exibindo dados atraves do state com o loop map */}
+      {produtos.map((produto) => {
+        return (
+          <section key={produto.id}>
+            <h3>Produto: {produto.title}</h3>
+
+            <p>
+              <b>Preço:</b> {produto.price}
+            </p>
+
+            <p>
+              <b>Descrição:</b> {produto.description}
+            </p>
+            <br />
+          </section>
+        );
+      })}
+    </article>
+  );
 }
 
 export default Produtos;
