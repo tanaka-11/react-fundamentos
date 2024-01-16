@@ -54,6 +54,7 @@ function Produtos() {
                 <b>Descrição:</b> {produto.description}
               </p>
               <br />
+              <hr />
             </section>
           );
         })
