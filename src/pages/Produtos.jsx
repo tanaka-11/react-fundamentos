@@ -3,9 +3,26 @@ import { useEffect, useState } from "react";
 
 // Importação da animação de carregamento
 import Loading from "../components/Loading";
+import styled from "styled-components";
 
 // Link das rotas
 import { Link } from "react-router-dom";
+
+// CSS
+const StyledProdutos = styled.article`
+  p {
+    color: white;
+  }
+
+  b {
+    color: black;
+  }
+
+  a {
+    text-decoration: none;
+    color: darkred;
+  }
+`;
 
 function Produtos() {
   // O state "produtos" inicia como um array vazio e só após o carregamento dos dados da API que ele será preenchido
@@ -40,7 +57,7 @@ function Produtos() {
   }, []); // Apos o 1º parametro(função) passar o 2º parametro(lista de dependencias)
 
   return (
-    <article>
+    <StyledProdutos>
       <h1>Produtos</h1>
 
       {/* Exibindo dados atraves do state com o loop map e metodo de loading com itenario (Se carregamento for verdadeiro então mostre o paragrafo, senão mostre os dados atraves do map)*/}
@@ -70,7 +87,7 @@ function Produtos() {
           );
         })
       )}
-    </article>
+    </StyledProdutos>
   );
 }
 

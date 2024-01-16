@@ -11,6 +11,14 @@ const StyledProduto = styled.article`
     display: flex;
     justify-content: center;
   }
+
+  p {
+    color: #fff;
+  }
+
+  b {
+    color: #000;
+  }
 `;
 
 function DetalhesProduto() {
