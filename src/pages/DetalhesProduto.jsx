@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import Loading from "../components/Loading";
 
 // CSS
 const StyledProduto = styled.article`
@@ -16,6 +17,9 @@ function DetalhesProduto() {
   // hook "useState" de produto
   const [produto, setProduto] = useState({});
 
+  // hook 'useState' do loading
+  const [loading, setLoading] = useState(true);
+
   // Usando o hook "useParams" com o parametro que foi passado na rota dinamica.
   const { id } = useParams();
 
@@ -26,6 +30,7 @@ function DetalhesProduto() {
         const resposta = await fetch(`https://fakestoreapi.com/products/${id}`); // id dinamico
         const dados = await resposta.json();
         setProduto(dados);
+        setLoading(false);
       } catch (error) {
         console.error("Erro ao carregar produto: " + error);
       }
@@ -36,21 +41,27 @@ function DetalhesProduto() {
 
   return (
     <StyledProduto>
-      <h2>{produto.title}</h2>
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <h2>{produto.title}</h2>
 
-      <p>
-        <b>Categoria:</b> {produto.category}
-      </p>
+          <p>
+            <b>Categoria:</b> {produto.category}
+          </p>
 
-      <p>
-        <b>Preço:</b> {produto.price}
-      </p>
+          <p>
+            <b>Preço:</b> {produto.price}
+          </p>
 
-      <p>{produto.description}</p>
+          <p>{produto.description}</p>
 
-      <div>
-        <img src={produto.image} alt="Imagem do produto" />
-      </div>
+          <div>
+            <img src={produto.image} alt="Imagem do produto" />
+          </div>
+        </>
+      )}
     </StyledProduto>
   );
 }
