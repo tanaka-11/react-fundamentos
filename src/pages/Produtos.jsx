@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 // Importação da animação de carregamento
 import imagemLoading from "../assets/loading.svg";
 
+// Link das rotas
+import { Link } from "react-router-dom";
+
 function Produtos() {
   // O state "produtos" inicia como um array vazio e só após o carregamento dos dados da API que ele será preenchido
   const [produtos, setProdutos] = useState([]);
@@ -57,6 +60,11 @@ function Produtos() {
 
               <p>
                 <b>Descrição:</b> {produto.description}
+              </p>
+
+              {/* Link de rota dinamica */}
+              <p>
+                <Link to={`/produtos/${produto.id}`}>Ver detalhes</Link>
               </p>
               <br />
               <hr />
