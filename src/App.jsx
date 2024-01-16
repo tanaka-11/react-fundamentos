@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Produtos from "./pages/Produtos";
 import Contato from "./pages/Contato";
 import Container from "./components/Container";
+import DetalhesProduto from "./pages/DetalhesProduto";
 
 // Importação de componentes do React Route
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -27,6 +28,9 @@ function App() {
             <Route Component={Home} exact path="/" />
             <Route Component={Produtos} path="/produtos" />
             <Route Component={Contato} path="/contato" />
+
+            {/* Rota dinamica para detalhes de produto */}
+            <Route Component={DetalhesProduto} path="/produtos/:id" />
           </Routes>
         </Container>
 
