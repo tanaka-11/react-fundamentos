@@ -1,6 +1,9 @@
 // React Hook
 import { useEffect, useState } from "react";
 
+// Importação da animação de carregamento
+import imagemLoading from "../assets/loading.svg";
+
 function Produtos() {
   // O state "produtos" inicia como um array vazio e só após o carregamento dos dados da API que ele será preenchido
   const [produtos, setProdutos] = useState([]);
@@ -39,7 +42,9 @@ function Produtos() {
 
       {/* Exibindo dados atraves do state com o loop map e metodo de loading com itenario (Se carregamento for verdadeiro então mostre o paragrafo, senão mostre os dados atraves do map)*/}
       {loading ? (
-        <p>Carregando...</p>
+        <div style={{ textAlign: "center" }}>
+          <img src={imagemLoading} alt="Carregando..." />
+        </div>
       ) : (
         produtos.map((produto) => {
           return (
